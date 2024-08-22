@@ -87,3 +87,14 @@ D:\Dev\Projetos\SkateShopApi\SkateShop.Api\bin\Debug\net7.0\SkateShop.Infrastruc
 D:\Dev\Projetos\SkateShopApi\SkateShop.Api\bin\Debug\net7.0\SkateShop.Infrastructure.exe
 D:\Dev\Projetos\SkateShopApi\SkateShop.Api\bin\Debug\net7.0\SkateShop.Infrastructure.dll
 D:\Dev\Projetos\SkateShopApi\SkateShop.Api\bin\Debug\net7.0\SkateShop.Infrastructure.pdb
+D:\Dev\Projetos\SkateShopApi\SkateShop.Api\bin\Debug\net7.0\FluentValidation.dll
+D:\Dev\Projetos\SkateShopApi\SkateShop.Api\bin\Debug\net7.0\Microsoft.IdentityModel.Abstractions.dll
+D:\Dev\Projetos\SkateShopApi\SkateShop.Api\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Dev\Projetos\SkateShopApi\SkateShop.Api\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+D:\Dev\Projetos\SkateShopApi\SkateShop.Api\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+D:\Dev\Projetos\SkateShopApi\SkateShop.Api\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
+D:\Dev\Projetos\SkateShopApi\SkateShop.Api\bin\Debug\net7.0\FluentValidation.DependencyInjectionExtensions.dll
+D:\Dev\Projetos\SkateShopApi\SkateShop.Api\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Dev\Projetos\SkateShopApi\SkateShop.Api\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+D:\Dev\Projetos\SkateShopApi\SkateShop.Api\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Dev\Projetos\SkateShopApi\SkateShop.Api\bin\Debug\net7.0\Newtonsoft.Json.dll

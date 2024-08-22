@@ -5,9 +5,9 @@ namespace SkateShop.Application.Queries.Messages.All
 {
     public class GetAllMessagesQueryHandler : IRequestHandler<GetAllMessagesQuery, IEnumerable<GetAllMessagesQueryResponse>>
     {
-        private readonly IMessageRepository _messageRepository;
+        private readonly ITopBarMessageRepository _messageRepository;
 
-        public GetAllMessagesQueryHandler(IMessageRepository messageRepository)
+        public GetAllMessagesQueryHandler(ITopBarMessageRepository messageRepository)
         {
             _messageRepository = messageRepository;
         }

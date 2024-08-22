@@ -4,11 +4,11 @@ using SkateShop.Domain.Entities;
 
 namespace SkateShop.Infrastructure.Mappings
 {
-    internal sealed class MessageMapping : Mapping<MessageBar>
+    internal sealed class TopBarMessageMapping : Mapping<TopBarMessage>
     {
-        public override void Configure(EntityTypeBuilder<MessageBar> builder)
+        public override void Configure(EntityTypeBuilder<TopBarMessage> builder)
         {
-            builder.ToTable("message_bar");
+            builder.ToTable("top_bar_messages");
 
             builder.Property(m => m.Message)
                .HasColumnName("message")

@@ -24,7 +24,11 @@ namespace SkateShop.Infrastructure
             base.OnConfiguring(optionsBuilder);
         }
 
-        public DbSet<MessageBar> Messages { get; set; }
+        public DbSet<TopBarMessage> TopBarMessages { get; set; }
+
+        public DbSet<User> Users { get; set; }
+
+        public DbSet<Permission> Permissions { get; set; }
 
         public virtual async Task CommitAsync()
         {
@@ -53,7 +57,9 @@ namespace SkateShop.Infrastructure
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.ApplyConfiguration(new MessageMapping());
+            modelBuilder.ApplyConfiguration(new TopBarMessageMapping());
+            modelBuilder.ApplyConfiguration(new UserMapping());
+            modelBuilder.ApplyConfiguration(new PermissionMapping());
         }
     }
 }
