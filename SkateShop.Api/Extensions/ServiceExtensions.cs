@@ -16,7 +16,8 @@ namespace SkateShop.Api.Extensions
                 {
                     builder.WithOrigins(new string[]
                     {
-                        "http://localhost:5173"
+                        "http://localhost:5173",
+                        "https://skate-shop-app.vercel.app/"
                     })
                         .AllowAnyHeader()
                         .AllowAnyMethod()

@@ -1,5 +1,6 @@
 using Appointify.Infrastructure.Authentication;
 using FluentValidation;
+using MediatR;
 using SkateShop.Api.Extensions;
 using SkateShop.Api.Filters;
 using SkateShop.Application.Commands.Users.Login;
@@ -35,6 +36,7 @@ builder.Services.AddScoped<IJwtProvider, JwtProvider>();
 builder.Services.AddScoped<IPasswordHasher, PasswordHasher>();
 builder.Services.AddScoped<INotificationContext, NotificationContext>();
 
+builder.Services.AddTransient(typeof(IPipelineBehavior<,>), typeof(PipelineValidationBehavior<,>));
 builder.Services.AddTransient<ITopBarMessageRepository, TopBarMessageRepository>();
 builder.Services.AddTransient<IUserRepository, UserRepository>();
 
