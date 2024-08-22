@@ -1,8 +1,8 @@
-﻿namespace SkateShop.Application.Queries.Messages.All
+﻿namespace SkateShop.Application.Queries.TopBarMessages.All
 {
-    public class GetAllMessagesQueryResponse
+    public class GetAllTopBarMessagesQueryResponse
     {
-        public GetAllMessagesQueryResponse(Guid id, string message)
+        public GetAllTopBarMessagesQueryResponse(Guid id, string message)
         {
             Id = id;
             Message = message;

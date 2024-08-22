@@ -1,10 +1,9 @@
-using Appointify.Infrastructure.Authentication;
 using FluentValidation;
 using MediatR;
 using SkateShop.Api.Extensions;
 using SkateShop.Api.Filters;
 using SkateShop.Application.Commands.Users.Login;
-using SkateShop.Application.Queries.Messages.All;
+using SkateShop.Application.Queries.TopBarMessages.All;
 using SkateShop.Domain.Authentication;
 using SkateShop.Domain.Notifications;
 using SkateShop.Domain.Repositories;
@@ -23,7 +22,7 @@ builder.Services
     });
 
 builder.Services.AddMediatR(c => c.RegisterServicesFromAssemblies(new[] {
-    typeof(GetAllMessagesQueryHandler).Assembly
+    typeof(GetAllTopBarMessagesQueryHandler).Assembly
 }));
 
 builder.Services.AddDbContext<DataContext>();

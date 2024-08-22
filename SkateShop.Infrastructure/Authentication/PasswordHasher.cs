@@ -1,7 +1,7 @@
 ﻿using SkateShop.Domain.Authentication;
 using System.Security.Cryptography;
 
-namespace Appointify.Infrastructure.Authentication
+namespace SkateShop.Infrastructure.Authentication
 {
     public class PasswordHasher : IPasswordHasher
     {

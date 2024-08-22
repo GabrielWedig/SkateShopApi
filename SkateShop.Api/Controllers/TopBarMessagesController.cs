@@ -1,6 +1,6 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using SkateShop.Application.Queries.Messages.All;
+using SkateShop.Application.Queries.TopBarMessages.All;
 
 namespace SkateShop.Api.Controllers
 {
@@ -18,7 +18,7 @@ namespace SkateShop.Api.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAllAsync()
         {
-            var messages = await _mediator.Send(new GetAllMessagesQuery());
+            var messages = await _mediator.Send(new GetAllTopBarMessagesQuery());
             return Ok(messages);
         }
     }
