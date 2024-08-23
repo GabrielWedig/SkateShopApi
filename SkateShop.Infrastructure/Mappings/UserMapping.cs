@@ -22,6 +22,10 @@ namespace SkateShop.Infrastructure.Mappings
                .HasColumnName("password")
                .IsRequired();
 
+            builder.Property(u => u.IsAdmin)
+               .HasColumnName("is_admin")
+               .IsRequired();
+
             builder.HasMany(u => u.Permissions)
                 .WithOne(p => p.User);
 

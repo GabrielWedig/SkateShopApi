@@ -1,9 +1,9 @@
 ﻿using MediatR;
-using SkateShop.Domain;
+using SkateShop.Application.Commands.Users.Login;
 
 namespace SkateShop.Application.Commands.Users.Create
 {
-    public class CreateUserCommand : IRequest<Nothing>
+    public class CreateUserCommand : IRequest<LoginUserCommandResponse?>
     {
         public string Name { get; set; } = string.Empty;
 

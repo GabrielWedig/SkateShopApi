@@ -1,6 +1,4 @@
-﻿using System.Globalization;
-
-namespace SkateShop.Domain.Entities
+﻿namespace SkateShop.Domain.Entities
 {
     public class User : Entity
     {
@@ -9,6 +7,8 @@ namespace SkateShop.Domain.Entities
         public string Email { get; set; } = string.Empty;
 
         public string Password { get; set; } = string.Empty;
+
+        public bool IsAdmin { get; set; } = false;
 
         public List<Permission> Permissions { get; set; } = new List<Permission>();
 

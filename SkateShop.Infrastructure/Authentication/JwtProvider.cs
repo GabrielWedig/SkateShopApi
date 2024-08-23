@@ -24,6 +24,8 @@ namespace SkateShop.Infrastructure.Authentication
             var claims = new List<Claim> {
                 new Claim(JwtRegisteredClaimNames.Sub, user.Id.ToString()),
                 new Claim(JwtRegisteredClaimNames.Email, user.Email),
+                new Claim(JwtRegisteredClaimNames.Name, user.Name),
+                new Claim("isAdmin", user.IsAdmin.ToString()),
             };
 
             var permissions = _context.Permissions.Where(p => p.UserId == user.Id);
@@ -50,7 +52,6 @@ namespace SkateShop.Infrastructure.Authentication
             var tokenString = new JwtSecurityTokenHandler().WriteToken(token);
 
             return tokenString;
-
         }
     }
 }

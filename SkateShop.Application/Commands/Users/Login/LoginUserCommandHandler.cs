@@ -44,7 +44,7 @@ namespace SkateShop.Application.Commands.Users.Login
 
             var token = _jwtProvider.Generate(user);
 
-            return new LoginUserCommandResponse(user.Id, user.Name, token);
+            return new LoginUserCommandResponse(token);
         }
     }
 }
