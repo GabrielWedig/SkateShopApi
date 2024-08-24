@@ -7,5 +7,10 @@
         public TopBarMessage()
         {
         }
+
+        public TopBarMessage(string message)
+        {
+            Message = message;
+        }
     }
 }

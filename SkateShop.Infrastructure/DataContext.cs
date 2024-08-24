@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.EntityFrameworkCore;
 using SkateShop.Domain.Entities;
-using SkateShop.Domain;
 using SkateShop.Infrastructure.Mappings;
+using SkateShop.Domain.Common;
 
 namespace SkateShop.Infrastructure
 {

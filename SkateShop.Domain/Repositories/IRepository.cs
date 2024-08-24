@@ -1,4 +1,5 @@
-﻿using SkateShop.Domain.Entities;
+﻿using SkateShop.Domain.Common;
+using SkateShop.Domain.Entities;
 
 namespace SkateShop.Domain.Repositories
 {
@@ -7,6 +8,8 @@ namespace SkateShop.Domain.Repositories
         IUnitOfWork UnitOfWork { get; }
 
         Task<List<TEntity>> GetAllAsync();
+
+        Task<(List<TEntity> Items, int Count)> GetAllPagedAsync(int page, int size);
 
         Task<TEntity?> GetByIdAsync(Guid id);
 

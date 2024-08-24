@@ -50,7 +50,7 @@ namespace SkateShop.Api.Extensions
         {
             services.AddSwaggerGen(options =>
             {
-                options.SwaggerDoc("v1", new OpenApiInfo { Title = "Appointify", Version = "v1" });
+                options.SwaggerDoc("v1", new OpenApiInfo { Title = "SkateShop", Version = "v1" });
 
                 options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme()
                 {

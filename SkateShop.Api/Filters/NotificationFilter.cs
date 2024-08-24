@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc.Filters;
 using Newtonsoft.Json;
-using SkateShop.Domain;
+using SkateShop.Domain.Common;
 using SkateShop.Domain.Notifications;
 
 namespace SkateShop.Api.Filters

@@ -46,6 +46,14 @@ builder.Services.Configure<JwtOptions>(builder.Configuration.GetSection("JwtOpti
 builder.Services.AddAuthenticationExtension(builder.Configuration);
 builder.Services.AddSwaggerAuthentication();
 
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("top-bar:getById", policy => policy.RequireClaim("permissions", "top-bar:getById"));
+    options.AddPolicy("top-bar:create", policy => policy.RequireClaim("permissions", "top-bar:create"));
+    options.AddPolicy("top-bar:update", policy => policy.RequireClaim("permissions", "top-bar:update"));
+    options.AddPolicy("top-bar:delete", policy => policy.RequireClaim("permissions", "top-bar:delete"));
+});
+
 // Add services to the container.
 
 builder.Services.AddControllers();

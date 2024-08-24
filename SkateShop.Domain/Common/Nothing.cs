@@ -1,4 +1,4 @@
-﻿namespace SkateShop.Domain
+﻿namespace SkateShop.Domain.Common
 {
     public readonly struct Nothing
     {
