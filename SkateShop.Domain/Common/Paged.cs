@@ -9,9 +9,5 @@
         public int Size { get; set; }
 
         public int Total { get; set; }
-
-        public bool HasNextPage => Page * Size < Total;
-
-        public bool HasPreviousPage => Page > 1;
     }
 }

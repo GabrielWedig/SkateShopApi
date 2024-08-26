@@ -13,14 +13,16 @@ namespace SkateShop.Infrastructure.Repositories
 
         public async Task<(List<TopBarMessage> Items, int Total)> GetAllFilteredPagedAsync(string searchTerm, int page, int size)
         {
-            var filtered = await Query
-                .ConditionalFilter(m => m.Message.ToLower().Contains(searchTerm.ToLower()), !string.IsNullOrEmpty(searchTerm))
+            var filtered = Query
+                .ConditionalFilter(m => m.Message.ToLower().Contains(searchTerm.ToLower()), !string.IsNullOrEmpty(searchTerm));
+
+            var paged = await filtered
                 .Paginate(page, size)
                 .ToListAsync();
 
-            var total = filtered.Count();
+            var total = await filtered.CountAsync();
 
-            return (filtered, total);
+            return (paged, total);
         }
     }
 }
