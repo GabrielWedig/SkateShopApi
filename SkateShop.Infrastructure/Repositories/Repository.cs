@@ -20,9 +20,6 @@ namespace SkateShop.Infrastructure.Repositories
 
         public virtual Task<List<TEntity>> GetAllAsync() => Query.ToListAsync();
 
-        public virtual async Task<(List<TEntity> Items, int Count)> GetAllPagedAsync(int page, int size) => 
-            (await Query.Paginate(page, size).ToListAsync(), await Query.CountAsync());
-
         public virtual Task<TEntity?> GetByIdAsync(Guid id) => Query.FirstOrDefaultAsync(x => x.Id == id);
 
         public void Add(TEntity entity) => Context.Add(entity);

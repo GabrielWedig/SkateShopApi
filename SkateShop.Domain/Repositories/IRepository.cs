@@ -9,8 +9,6 @@ namespace SkateShop.Domain.Repositories
 
         Task<List<TEntity>> GetAllAsync();
 
-        Task<(List<TEntity> Items, int Count)> GetAllPagedAsync(int page, int size);
-
         Task<TEntity?> GetByIdAsync(Guid id);
 
         void Add(TEntity entity);

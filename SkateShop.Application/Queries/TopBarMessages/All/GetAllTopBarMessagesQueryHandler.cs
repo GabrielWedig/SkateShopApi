@@ -15,7 +15,7 @@ namespace SkateShop.Application.Queries.TopBarMessages.All
 
         public async Task<Paged<GetAllTopBarMessagesQueryResponse>> Handle(GetAllTopBarMessagesQuery query, CancellationToken cancellationToken)
         {
-            var messages = await _messageRepository.GetAllPagedAsync(query.Page ?? 1, query.Size ?? 100);
+            var messages = await _messageRepository.GetAllFilteredPagedAsync(query.SearchTerm, query.Page ?? 1, query.Size ?? 100);
 
             return new Paged<GetAllTopBarMessagesQueryResponse>()
             {
